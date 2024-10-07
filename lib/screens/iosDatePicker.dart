@@ -1,9 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class IosDatePicker extends StatelessWidget {
+class IosDatePicker extends StatefulWidget {
   const IosDatePicker({super.key});
 
+  @override
+  State<IosDatePicker> createState() => _IosDatePickerState();
+}
+
+class _IosDatePickerState extends State<IosDatePicker> {
   @override
   Widget build(BuildContext context) {
     DateTime dateTime = DateTime.now();
@@ -17,7 +22,9 @@ class IosDatePicker extends StatelessWidget {
                     height: 300,
                     child: CupertinoDatePicker(
                       onDateTimeChanged: (DateTime newTime) {
-                        dateTime = newTime;
+                       setState(() {
+                         dateTime = newTime;
+                       });
                       },
                       use24hFormat: true,
                       backgroundColor: Colors.white,
@@ -33,7 +40,9 @@ class IosDatePicker extends StatelessWidget {
                     height: 300,
                     child: CupertinoDatePicker(
                       onDateTimeChanged: (DateTime newTime) {
-                        dateTime = newTime;
+                        setState(() {
+                          dateTime = newTime;
+                        });
                       },
                       use24hFormat: true,
                       mode: CupertinoDatePickerMode.time,

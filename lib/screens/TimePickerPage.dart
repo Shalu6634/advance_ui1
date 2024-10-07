@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 TimeOfDay? selectedTime;
-class TimePage extends StatelessWidget {
+class TimePage extends StatefulWidget {
   const TimePage({super.key});
 
+  @override
+  State<TimePage> createState() => _TimePageState();
+}
+
+class _TimePageState extends State<TimePage> {
   @override
 
   Widget build(BuildContext context) {
@@ -44,7 +49,10 @@ class TimePage extends StatelessWidget {
 
                 if(pickTime!=null && pickTime!=selectedTime)
                 {
-                  selectedTime = pickTime;
+                  setState(() {
+
+                    selectedTime = pickTime;
+                  });
 
                 }
 

@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class DateTimePage extends StatelessWidget {
+class DateTimePage extends StatefulWidget {
   const DateTimePage({super.key});
 
+  @override
+  State<DateTimePage> createState() => _DateTimePageState();
+}
+
+class _DateTimePageState extends State<DateTimePage> {
   @override
   Widget build(BuildContext context) {
     TextEditingController selectTimeController = TextEditingController();
@@ -45,11 +50,15 @@ class DateTimePage extends StatelessWidget {
                         lastDate: DateTime(2025));
                     if(pickedTime!=null)
                     {
-                      selectTimeController.text = DateFormat.yMd().format(pickedTime);
+                      setState(() {
+                        selectTimeController.text = DateFormat.yMd().format(pickedTime);
+                      });
                     }
                     else
                     {
-                      selectTimeController.text = DateFormat.yMd().format(DateTime.now());
+                      setState(() {
+                        selectTimeController.text = DateFormat.yMd().format(DateTime.now());
+                      });
                     }
                   },
                   child: const Padding(

@@ -1,9 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DialogScreen extends StatelessWidget {
+class DialogScreen extends StatefulWidget {
   const DialogScreen({super.key});
 
+  @override
+  State<DialogScreen> createState() => _DialogScreenState();
+}
+
+class _DialogScreenState extends State<DialogScreen> {
   @override
   Widget build(BuildContext context) {
     String? selectedOption;
@@ -33,7 +38,9 @@ class DialogScreen extends StatelessWidget {
                             value: 'Option 1',
                             groupValue: selectedOption,
                             onChanged: (String? value) {
-                                selectedOption = value;
+                             setState(() {
+                               selectedOption = value;
+                             });
                               Navigator.of(context).pop();
                             },
                           ),
@@ -43,7 +50,10 @@ class DialogScreen extends StatelessWidget {
                             groupValue: selectedOption,
                             onChanged: (String? value) {
 
+                              setState(() {
                                 selectedOption = value;
+                              });
+
 
                               Navigator.of(context).pop();
                             },
@@ -54,7 +64,9 @@ class DialogScreen extends StatelessWidget {
                             groupValue: selectedOption,
                             onChanged: (String? value) {
 
-                                selectedOption = value;
+                               setState(() {
+                                 selectedOption = value;
+                               });
 
                               Navigator.of(context).pop();
                             },
@@ -64,7 +76,9 @@ class DialogScreen extends StatelessWidget {
                             value: 'Option 4',
                             groupValue: selectedOption,
                             onChanged: (String? value) {
-                                  selectedOption = value;
+                                  setState(() {
+                                    selectedOption = value;
+                                  });
 
                               Navigator.of(context).pop();
                             },
@@ -75,7 +89,9 @@ class DialogScreen extends StatelessWidget {
                             groupValue: selectedOption,
                             onChanged: (String? value) {
 
+                              setState(() {
                                 selectedOption = value;
+                              });
 
                               Navigator.of(context).pop();
                             },
@@ -90,7 +106,7 @@ class DialogScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).pop(); // Close dialog without saving
                     },
-                    child: Text('Cancel',style: TextStyle(color: Color(0xff386927))),
+                    child: const Text('Cancel',style: TextStyle(color: Color(0xff386927))),
                   ),
                   CupertinoDialogAction(
                     onPressed: () {
@@ -99,13 +115,13 @@ class DialogScreen extends StatelessWidget {
                       // });
                       Navigator.of(context).pop(); // Close dialog and save
                     },
-                    child: Text('OK',style: TextStyle(color: Color(0xff386927)),),
+                    child: const Text('OK',style: TextStyle(color: Color(0xff386927)),),
                   ),
                 ],
               ),
             );
           },
-          child: Text('open dialog box'),
+          child: const Text('open dialog box'),
         ),
       ),
     );
