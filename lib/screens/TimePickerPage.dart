@@ -17,7 +17,6 @@ class TimePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
             Center(
               child: ElevatedButton(onPressed: () async {
                 final TimeOfDay? pickTime = await showTimePicker(context: context, initialTime: TimeOfDay.now(),

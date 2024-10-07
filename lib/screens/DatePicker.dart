@@ -20,14 +20,11 @@ class DateTimePage extends StatelessWidget {
           controller: selectTimeController,
           cursorColor: Colors.black,
           style: const TextStyle(color: Colors.black),
-
           decoration:InputDecoration(labelText: 'Date',labelStyle: TextStyle(color: Color(0xff386927)),
               suffixIcon: GestureDetector(
                   onTap: () async {
                     DateTime? pickedTime = await showDatePicker(
                         builder: (BuildContext context, Widget? child) {
-
-
                           return Theme(
                             data: ThemeData.light().copyWith(
                               colorScheme: const ColorScheme.light(
@@ -48,14 +45,12 @@ class DateTimePage extends StatelessWidget {
                         lastDate: DateTime(2025));
                     if(pickedTime!=null)
                     {
-
                       selectTimeController.text = DateFormat.yMd().format(pickedTime);
                     }
                     else
                     {
                       selectTimeController.text = DateFormat.yMd().format(DateTime.now());
                     }
-
                   },
                   child: const Padding(
                     padding: EdgeInsets.all(8.0),

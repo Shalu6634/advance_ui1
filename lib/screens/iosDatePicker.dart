@@ -12,9 +12,7 @@ class IosDatePicker extends StatelessWidget {
         title: const Text('iOS date Picker'),
       ),
       body: Column(
-
         children: [
-
               SizedBox(
                     height: 300,
                     child: CupertinoDatePicker(

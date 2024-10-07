@@ -17,9 +17,9 @@ class DialogScreen extends StatelessWidget {
             showCupertinoDialog(
               context: context,
               builder: (context) => CupertinoAlertDialog(
-                title: Padding(
-                  padding: const EdgeInsets.only(right: 90),
-                  child: const Text('Phone Ringtone',style:   TextStyle(fontSize: 16),),
+                title: const Padding(
+                  padding:  EdgeInsets.only(right: 90),
+                  child:  Text('Phone Ringtone',style:   TextStyle(fontSize: 16),),
                 ),
                 content: Material(
                   color: Colors.transparent,
@@ -33,9 +33,7 @@ class DialogScreen extends StatelessWidget {
                             value: 'Option 1',
                             groupValue: selectedOption,
                             onChanged: (String? value) {
-
                                 selectedOption = value;
-
                               Navigator.of(context).pop();
                             },
                           ),
