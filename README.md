@@ -1,16 +1,6 @@
 # advance_ui1
 
-A new Flutter project.
+<img src = "https://github.com/user-attachments/assets/d597ff5e-484c-4129-ae24-a3ce4e4f6cb6"  height = 25%  width = 25%>
+<img src = "https://github.com/user-attachments/assets/c016b41f-afaa-4f2b-ba7e-94ee41cafcad"  height = 25%  width = 25%>
+<img src = "https://github.com/user-attachments/assets/26ee4b69-3281-4d8d-a5f7-a205cd10ec7b"  height = 25%  width = 25%>
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
